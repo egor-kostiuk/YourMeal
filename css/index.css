@@ -1,4 +1,9 @@
 @import 'normalize.css';
 @import 'fonts.css';
 @import 'default.css';
-@import 'header.css'
+
+/* Header */
+@import 'header.css';
+
+/* Nav */
+@import 'navigation.css'
