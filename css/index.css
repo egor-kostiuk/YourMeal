@@ -6,4 +6,9 @@
 @import 'header.css';
 
 /* Nav */
-@import 'navigation.css'
+@import 'navigation.css';
+
+/* Catalog */
+@import 'catalog.css';
+    /* Order */
+    @import 'order.css';

@@ -61,9 +61,13 @@ fieldset {
 }
 
 .container {
-    max-width: calc(var(--container) + (var(--paddint-container) * 2));
-    padding: 0 var(--paddint-container);
+    max-width: calc(var(--container) + (var(--padding-container) * 2));
+    padding: 0 var(--padding-container);
     margin: 0 auto;
+}
+
+.currency {
+    font-weight: 400;
 }
 
 @media (min-width: 480px) {
