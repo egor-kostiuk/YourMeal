@@ -100,10 +100,10 @@
 
         <!-- Catalog and Order basket -->
             <section class="catalog">
-                <div class="container">
+                <div class="container catalog__container">
 
                 <!-- Order basket -->
-                    <div class="catalog__order order order_open">
+                    <div class="catalog__order order order_open"> <!-- order_open-->
                         <section class="order__wrapper">
                             <div class="order__wrap-title" tabindex="0" role="button">
                               <h2 class="order__title">Корзина</h2>  
@@ -118,15 +118,15 @@
                                     
                                 <!-- Order item 1 -->   
                                     <li class="order__item">
-                                        <img src="img/burger_1.jpg" alt="Супер сырный">
+                                        <img class="order__image" src="img/burger_1.jpg" alt="Супер сырный">
 
                                         <div class="order__product">
                                             <h3 class="order__product-title">Супер сырный</h3>
 
                                             <p class="order__product-weight">512г</p>
 
-                                            <p class="">
-                                                <span class="order__product-price">550</span>
+                                            <p class="order__product-price">
+                                                <span>550</span>
                                                 <span class="currency">₴</span>
                                             </p>
 
@@ -145,15 +145,15 @@
 
                                 <!-- Order item 2 -->
                                     <li class="order__item">
-                                        <img src="img/free_1.jpg" alt="Картошка фри">
+                                        <img class="order__image" src="img/free_1.jpg" alt="Картошка фри">
 
                                         <div class="order__product">
                                             <h3 class="order__product-title">Картошка фри</h3>
 
                                             <p class="order__product-weight">180г</p>
 
-                                            <p class="">
-                                                <span class="order__product-price">245</span>
+                                            <p class="order__product-price">
+                                                <span>245</span>
                                                 <span class="currency">₴</span>
                                             </p>
 
@@ -172,15 +172,15 @@
 
                                 <!-- Order item 3 -->    
                                     <li class="order__item">
-                                        <img src="img/hot-dog_1.jpg" alt="Жгучий хот-дог">
+                                        <img class="order__image" src="img/hot-dog_1.jpg" alt="Жгучий хот-дог">
 
                                         <div class="order__product">
                                             <h3 class="order__product-title">Жгучий хот-дог</h3>
 
                                             <p class="order__product-weight">245г</p>
 
-                                            <p class="">
-                                                <span class="order__product-price">239</span>
+                                            <p class="order__product-price">
+                                                <span>239</span>
                                                 <span class="currency">₴</span>
                                             </p>
 
@@ -226,19 +226,152 @@
                     <div class="catalog__wrapper">
                         <h2 class="catalog__title">Бургеры</h2>
 
+                    <!-- Catalog list -->
                         <div class="catalog__wrap_list">
                             <ul class="catalog__list">
+
+                            <!-- Catalog item 1 -->
+                                <li class="catalog__item">
+                                    <article class="product">
+                                        <img src="img/photo.jpg" alt="Мясная бомба" class="product__image">
+
+                                        <p class="product__price">
+                                            <span>689</span>
+                                            <span class="currency">₴</span>
+                                        </p>
+
+                                        <h3 class="product__title">
+                                            <button class="product__detail">Мясная бомба</button>
+                                        </h3>
+
+                                        <p class="product__weight">520г</p>
+
+                                        <button class="product__add" type="button">Добавить</button>
+
+                                    </article>
+                                </li>
+
+                            <!-- Catalog item 2 -->
+                                <li class="catalog__item">
+                                    <article class="product">
+                                        <img src="img/photo-1.jpg" alt="Супер сырный" class="product__image">
+
+                                        <p class="product__price">
+                                            <span>550</span>
+                                            <span class="currency">₴</span>
+                                        </p>
+
+                                        <h3 class="product__title">
+                                            <button class="product__detail">Супер сырный</button>
+                                        </h3>
+
+                                        <p class="product__weight">512г</p>
+
+                                        <button class="product__add" type="button">Добавить</button>
+
+                                    </article>
+                                </li>
+
+                            <!-- Catalog item 3 -->
+                                <li class="catalog__item">
+                                    <article class="product">
+                                        <img src="img/photo-2.jpg" alt="Сытный" class="product__image">
+
+                                        <p class="product__price">
+                                            <span>639</span>
+                                            <span class="currency">₴</span>
+                                        </p>
+
+                                        <h3 class="product__title">
+                                            <button class="product__detail">Сытный</button>
+                                        </h3>
+
+                                        <p class="product__weight">580г</p>
+
+                                        <button class="product__add" type="button">Добавить</button>
+
+                                    </article>
+                                </li>
+
+                            <!-- Catalog item 4 -->
+                                <li class="catalog__item">
+                                    <article class="product">
+                                        <img src="img/photo-3.jpg" alt="Тяжелый удар " class="product__image">
+
+                                        <p class="product__price">
+                                            <span>480</span>
+                                            <span class="currency">₴</span>
+                                        </p>
+
+                                        <h3 class="product__title">
+                                            <button class="product__detail">Тяжелый удар </button>
+                                        </h3>
+
+                                        <p class="product__weight">470г</p>
+
+                                        <button class="product__add" type="button">Добавить</button>
+
+                                    </article>
+                                </li>
+
+                            <!-- Catalog item 5 -->
+                                <li class="catalog__item">
+                                    <article class="product">
+                                        <img src="img/photo-4.jpg" alt="Вечная классика" class="product__image">
+
+                                        <p class="product__price">
+                                            <span>450</span>
+                                            <span class="currency">₴</span>
+                                        </p>
+
+                                        <h3 class="product__title">
+                                            <button class="product__detail">Вечная классика</button>
+                                        </h3>
+
+                                        <p class="product__weight">450г</p> 
+
+                                        <button class="product__add" type="button">Добавить</button>
+
+                                    </article>
+                                </li>
+
+                            <!-- Catalog item 6 --> 
+                                <li class="catalog__item">
+                                    <article class="product">
+                                        <img src="img/photo-5.jpg" alt="Итальянский" class="product__image">
+
+                                        <p class="product__price">
+                                            <span>560</span>
+                                            <span class="currency">₴</span>
+                                        </p>
+
+                                        <h3 class="product__title">
+                                            <button class="product__detail">Итальянский</button>
+                                        </h3>
+
+                                        <p class="product__weight">510г</p>
+
+                                        <button class="product__add" type="button">Добавить</button>
+
+                                    </article>
+                                </li>
 
                             </ul>
                         </div>
 
                     </div> 
                     
-                    
-
+                                      
                 </div>
             </section>
 
         </main>
+
+        <!-- Script open Order basket -->
+            <script>
+                document.querySelector('.order__wrap-title').addEventListener('click', () => {
+                    document.querySelector('.order').classList.toggle('order_open')
+                })
+            </script>
     </body>
 </html>
