@@ -16,3 +16,6 @@
         /* Catalog */
         @import 'product.css';
         @import 'catalog.css';
+
+/* Footer */
+@import 'footer.css';
