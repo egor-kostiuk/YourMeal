@@ -2,6 +2,8 @@
 @import 'fonts.css';
 @import 'default.css';
 @import 'count.css';
+@import 'modal.css';
+@import 'ingredients.css';
 
 /* Header */
 @import 'header.css';
@@ -19,3 +21,6 @@
 
 /* Footer */
 @import 'footer.css';
+
+/* Modal window */
+@import 'modal-product.css';
