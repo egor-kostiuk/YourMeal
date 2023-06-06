@@ -120,5 +120,53 @@
 }
 
 @media (min-width: 480px) {
-    
+    .modal-delivery {
+        max-width: 524px;
+        min-height: auto;
+        padding: 20px 16px 29px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 24px;
+    }
+
+    .modal-delivery__container {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .modal-delivery {
+        max-width: 684px;
+        padding: 44px 24px 24px 366px;
+        background: url('/img/donut.svg') 19px center, linear-gradient(to right, #FFAB08 50%, #FFF 50%);
+        background-size: 302px, auto;
+        background-repeat: no-repeat;
+    }
+
+    .modal-delivery__title {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .modal-delivery__form {
+        margin-bottom: 32px;
+        gap: 16px;
+    }
+
+    .modal-delivery__input {
+        font-size: 12px;
+        padding: 10px 12px;
+        height: 40px;
+    }
+
+    .modal-delivery__label {
+        font-size: 12px;
+    }
+
+    .modal-delivery__fieldset_radio {
+        gap: 12px;
+    }
+
+    .modal-delivery__submit {
+        font-size: 16px;
+    }
 }
