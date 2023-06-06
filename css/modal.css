@@ -26,6 +26,15 @@
     outline-offset: 3px;
 }
 
+.modal__close2 {  /* !todo optimaze */
+    color: #B1B1B1;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+}
+
 .modal__close:focus-visible {
     color: #FF7020;
     outline-color: #FF7020;

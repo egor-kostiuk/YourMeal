@@ -1,0 +1,124 @@
+.modal-delivery {
+    --gap: 8px;
+    background-color: #FFFFFF;
+    width: 100%;
+    min-height: 100%;
+    padding: 32px 10px;
+    display: flex;
+}
+
+.modal-delivery__container {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-delivery__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 18px;
+}
+
+.modal-delivery__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-grow: 1;
+    margin-bottom: 18px;
+}
+
+.modal-delivery__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.modal-delivery__fieldset_radio {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modal-delivery__fieldset_hide {
+    visibility: hidden;
+}
+
+.modal-delivery__input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #F2F2F3;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 10px;
+    line-height: 130%;
+    color: #000;
+}
+
+.modal-delivery__input_half {
+    flex-basis: calc((100% - var(--gap)) / 2);
+}
+
+.modal-delivery__input::placeholder {
+    color: #B1B1B1;
+}
+
+.modal-delivery__label {
+    display: flex;
+    gap: 8px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.modal-delivery__radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 12px;
+}
+
+.modal-delivery__radio::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #F2F2F3;
+}
+
+.modal-delivery__radio::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.modal-delivery__radio:checked::after {
+    opacity: 1;
+}
+
+.modal-delivery__submit {
+    padding: 9px;
+    background-color: #FF7020;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+@media (min-width: 480px) {
+    
+}

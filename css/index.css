@@ -22,5 +22,8 @@
 /* Footer */
 @import 'footer.css';
 
-/* Modal window */
+/* Modal product window */
 @import 'modal-product.css';
+
+/* Modal order window */
+@import 'modal-delivery.css';

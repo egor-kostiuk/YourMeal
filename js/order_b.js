@@ -1,11 +1,11 @@
 // Получаем ссылку на div с классом "order__wrap-title"
-let orderTitle = document.querySelector('.order__wrap-title');
+const orderTitle = document.querySelector('.order__wrap-title');
 
 // Получаем ссылку на кнопку с классом "order__close"
-let closeBtn = document.querySelector('.order__close');
+const closeBtn = document.querySelector('.order__close');
 
 // Получаем ссылку на корзину
-let order = document.querySelector('.order');
+const order = document.querySelector('.order');
 
 // Функция для открытия корзины
 function openOrder() {
