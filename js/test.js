@@ -1,31 +1,26 @@
+import {
+  catalogItemInfo
+} from './catalog-item-info.js'
 
 
 
-
-
-
-
-
-
-
-/* const orderItem = document.getElementsByClassName('order__item')[0] */
 
 const productAddBtn = document.getElementsByClassName('product__add')[0]
-const orderList = document.getElementsByClassName('order__list')[0]
 
 productAddBtn.addEventListener('click', function() {
+  const orderList = document.getElementsByClassName('order__list')[0]
   const orderItem = document.createElement('li');
 
   orderItem.innerHTML = 
-  `<img class="order__image" src="img/burger_1.jpg" alt="Супер сырный">
+  `<img class="order__image" src="${catalogItemInfo.catalogItemImageSrc}" alt="${catalogItemInfo.catalogItemName}">
 
   <div class="order__product">
-      <h3 class="order__product-title">${1}</h3>
+      <h3 class="order__product-title">${catalogItemInfo.catalogItemName}</h3>
 
-      <p class="order__product-weight"${1}г</p>
+      <p class="order__product-weight"${catalogItemInfo.catalogItemWeight}г</p>
 
       <p class="order__product-price">
-          <span>${1}</span>
+          <span>${catalogItemInfo.catalogItemPrice}</span>
           <span class="currency">₴</span>
       </p>
 
