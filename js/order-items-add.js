@@ -1,32 +1,18 @@
+import { createOrderItem } from './createOrderItem.js'
+
 const productAddBtn = document.querySelectorAll('.product__add');
 let orderTotalAmount = 0;
-
-// creates a new item in the order basket using catalog item
-function createOrderItem(catalogItemInfo) {
-  const orderItem = document.createElement('li');
-  orderItem.innerHTML = `
-    <img class="order__image" src="${catalogItemInfo.catalogItemImageSrc}" alt="${catalogItemInfo.catalogItemName}">
-    <div class="order__product">
-        <h3 class="order__product-title">${catalogItemInfo.catalogItemName}</h3>
-        <p class="order__product-weight">${catalogItemInfo.catalogItemWeight}г</p>
-        <p class="order__product-price">
-            <span>${catalogItemInfo.catalogItemPrice}</span>
-            <span class="currency">₴</span>
-        </p>
-    </div>
-    <div class="order__product-count count">
-        <button class="count__minus">-</button>
-        <p class="count__amount">1</p>
-        <button class="count__plus">+</button>
-    </div>
-  `;
-  return orderItem;
-}
+let orderItemsCount = 0;
 
 // calculates the total amount of the order
 function updateTotalAmountDisplay() {
   const orderTotalAmountElement = document.querySelector('.order__total-amount');
   orderTotalAmountElement.textContent = orderTotalAmount;
+}
+// calculates the total Items in the order basket
+function updateTotalOrderItems() {
+  const orderTotalCountElement = document.querySelector('.order__count');
+  orderTotalCountElement.textContent = orderItemsCount;
 }
 
 productAddBtn.forEach(function (button, index) {
@@ -45,6 +31,9 @@ productAddBtn.forEach(function (button, index) {
 
     orderItem.style.display = 'flex';
     orderItem.classList.add('order__item');
+
+    orderItemsCount++
+    updateTotalOrderItems();
 
     orderTotalAmount += catalogItemInfo.catalogItemPrice;
     updateTotalAmountDisplay();
