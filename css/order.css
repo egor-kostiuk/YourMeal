@@ -68,7 +68,8 @@
 }
 
 .order__item {
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     gap: 6px;
     padding: 10px 0;
