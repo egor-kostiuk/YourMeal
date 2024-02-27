@@ -137,8 +137,8 @@
     .modal-delivery {
         max-width: 684px;
         padding: 44px 24px 24px 366px;
-        background: url('/img/donut.svg') 19px center, linear-gradient(to right, #FFAB08 50%, #FFF 50%);
-        background-size: 302px, auto;
+        background: url('/img/donut.png') 75px center, linear-gradient(to right, #FFAB08 50%, #FFF 50%);
+        background-size: 200px, auto;
         background-repeat: no-repeat;
     }
 
