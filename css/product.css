@@ -22,10 +22,14 @@
 }
 
 .product__title {
+    font-weight: 500;
     font-size: 12px;
     line-height: 130%;
     flex-grow: 1;
     margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .product__detail {
