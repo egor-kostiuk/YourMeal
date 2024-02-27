@@ -1,4 +1,4 @@
-import { createOrderItem } from './createOrderItem.js'
+import { createOrderItem } from './createOrderItem.js';
 
 const productAddBtn = document.querySelectorAll('.product__add');
 let orderTotalAmount = 0;
@@ -37,7 +37,37 @@ productAddBtn.forEach(function (button, index) {
 
     orderTotalAmount += catalogItemInfo.catalogItemPrice;
     updateTotalAmountDisplay();
+
+
+    const countPlusBtn = orderItem.querySelector('.count__plus');
+    const countMinusBtn = orderItem.querySelector('.count__minus');
+    const countAmountElement = orderItem.querySelector('.count__amount');
+
+    countPlusBtn.addEventListener('click', updateOneItemCount.bind(countAmountElement, 1));
+    countMinusBtn.addEventListener('click', updateOneItemCount.bind(countAmountElement, -1));
   })
 });
 
+function updateOneItemCount(delta) {
+  let countAmountElement = this.closest('.count__amount');
+  let currentAmount = parseInt(countAmountElement.textContent);
+  currentAmount = Math.max(currentAmount + delta, 1);
+  let orderItem = this.closest('.order__item');
+  let productPriceElement = orderItem.querySelector('.order__product-price span');
+
+  if (currentAmount === 1 && delta === -1) {
+    // Если количество равно 1 и нажата кнопка "count__minus", удаляем элемент из корзины
+    orderItemsCount--;
+    updateTotalOrderItems();
+    orderTotalAmount -= parseFloat(productPriceElement.textContent);
+    updateTotalAmountDisplay();
+    orderItem.remove();
+  } else {
+    orderItemsCount += delta;
+    updateTotalOrderItems();
+    orderTotalAmount += delta * parseFloat(productPriceElement.textContent);
+    updateTotalAmountDisplay();
+    countAmountElement.textContent = currentAmount;
+  }
+}
 
