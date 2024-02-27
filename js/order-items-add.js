@@ -51,12 +51,12 @@ productAddBtn.forEach(function (button, index) {
 function updateOneItemCount(delta) {
   let countAmountElement = this.closest('.count__amount');
   let currentAmount = parseInt(countAmountElement.textContent);
-  currentAmount = Math.max(currentAmount + delta, 1);
+  currentAmount = Math.max(currentAmount + delta, 0);
   let orderItem = this.closest('.order__item');
   let productPriceElement = orderItem.querySelector('.order__product-price span');
 
-  if (currentAmount === 1 && delta === -1) {
-    // Если количество равно 1 и нажата кнопка "count__minus", удаляем элемент из корзины
+  if (currentAmount === 0 && delta === -1) {
+    // Если количество равно 0 и нажата кнопка "count__minus", удаляем элемент из корзины
     orderItemsCount--;
     updateTotalOrderItems();
     orderTotalAmount -= parseFloat(productPriceElement.textContent);
