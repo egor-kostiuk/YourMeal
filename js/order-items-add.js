@@ -26,19 +26,23 @@ productAddBtn.forEach(function (button, index) {
       catalogItemImageSrc: catalogItem.querySelector(".product__image").getAttribute("src"),
     }
 
+    // creates a new item at the end of the order basket
     const orderItem = createOrderItem(catalogItemInfo);
     orderList.appendChild(orderItem);
 
+    // adding styles to the element and its visibility
     orderItem.style.display = 'flex';
     orderItem.classList.add('order__item');
 
+    // call updateTotalOrderItems()
     orderItemsCount++
     updateTotalOrderItems();
 
+    // call updateTotalAmountDisplay()
     orderTotalAmount += catalogItemInfo.catalogItemPrice;
     updateTotalAmountDisplay();
 
-
+    // consts for updateOneItemCount()
     const countPlusBtn = orderItem.querySelector('.count__plus');
     const countMinusBtn = orderItem.querySelector('.count__minus');
     const countAmountElement = orderItem.querySelector('.count__amount');
@@ -48,6 +52,7 @@ productAddBtn.forEach(function (button, index) {
   })
 });
 
+// counts the quantity of each item in the order basket and deletes if there are 0 items
 function updateOneItemCount(delta) {
   let countAmountElement = this.closest('.count__amount');
   let currentAmount = parseInt(countAmountElement.textContent);
@@ -56,13 +61,13 @@ function updateOneItemCount(delta) {
   let productPriceElement = orderItem.querySelector('.order__product-price span');
 
   if (currentAmount === 0 && delta === -1) {
-    // Если количество равно 0 и нажата кнопка "count__minus", удаляем элемент из корзины
+    // If the quantity is 0 and the "count__minus" button is pressed, remove the item from the order basket
     orderItemsCount--;
     updateTotalOrderItems();
     orderTotalAmount -= parseFloat(productPriceElement.textContent);
     updateTotalAmountDisplay();
     orderItem.remove();
-  } else {
+  } else { // counts the quantity of each item
     orderItemsCount += delta;
     updateTotalOrderItems();
     orderTotalAmount += delta * parseFloat(productPriceElement.textContent);
