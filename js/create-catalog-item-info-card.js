@@ -1,12 +1,12 @@
-export function createCatalogItemInfoCard() {
+export function createCatalogItemInfoCard(catalogItemInfo) {
   const catalogItemInfoElement = document.createElement('li');
   catalogItemInfoElement.innerHTML = `
   <div class="modal modal_product">
   <div class="modal__main modal-product">
       <div class="modal-product__container">
-          <h2 class="modal-product__title">Мясная бомба</h2>
+          <h2 class="modal-product__title">${catalogItemInfo.catalogItemName}</h2>
           <div class="modal-product__content">
-              <img src="img/photo.jpg" alt="Мясная бомба" class="modal-product__image">
+              <img src="${catalogItemInfo.catalogItemImageSrc}" class="modal-product__image">
               <p class="modal-product__descr">
                   Супер мясное наслаждение! 
                   Большая рубленая котлета из свежего говяжего мяса покорит вас своей сочностью, 
@@ -21,7 +21,7 @@ export function createCatalogItemInfoCard() {
                       <li class="ingredients__item">Листья салата</li>
                       <li class="ingredients__item">Соус горчичный</li>
                   </ul>
-                  <p class="ingredients__calories">520г, ккал 430</p>
+                  <p class="ingredients__calories">${catalogItemInfo.catalogItemWeight}, ккал 430</p>
               </div>
           </div>
           <div class="modal-product__footer">
@@ -37,7 +37,7 @@ export function createCatalogItemInfoCard() {
                   </div>
               </div>
               <p class="modal-product__price">
-                  <span>689</span>
+                  <span>${catalogItemInfo.catalogItemPrice}</span>
                   <span class="currency">₴</span>
               </p>
           </div>
