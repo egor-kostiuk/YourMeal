@@ -1,4 +1,4 @@
-import { createOrderItem } from './create-Order-Basket-Item.js';
+import { createOrderItem } from './create-order-basket-item,js';
 
 const productAddBtn = document.querySelectorAll('.product__add');
 let orderTotalAmount = 0;
