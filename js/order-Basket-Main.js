@@ -1,4 +1,4 @@
-import { createOrderItem } from './create-order-basket-item,js';
+import { createOrderItem } from './create-order-basket-item.js';
 
 // main order list const
 const orderList = document.querySelector('.order__list');
