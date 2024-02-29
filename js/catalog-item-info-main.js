@@ -4,7 +4,7 @@ import { createCatalogItemInfoCard } from './create-catalog-item-info-card.js'
 const detailButton = document.querySelectorAll('.product__detail');
 
 detailButton.forEach((button, index) => {
-  button.addEventListener('click', () => handleOfCatalogItemInfoClick (index));
+  button.addEventListener('click', () => handleOfCatalogItemInfoClick(index));
 });
 
 // main function
