@@ -103,7 +103,7 @@
 }
 
 .order__total {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     font-size: 12px;
@@ -112,6 +112,7 @@
 }
 
 .order__submit {
+    display: none;
     width: 100%;
     padding: 9px;
     background-color: #FF7020;
