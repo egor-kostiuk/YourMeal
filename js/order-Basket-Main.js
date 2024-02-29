@@ -1,8 +1,24 @@
 import { createOrderItem } from './create-Order-Basket-Item.js';
 
+// main order list const
+const orderList = document.querySelector('.order__list');
+
+// catalog item add button
 const productAddBtn = document.querySelectorAll('.product__add');
+
+// variables for calculating the price and quantity of items in order basket
+const orderTotalInfo = document.querySelector('.order__total');
+const orderSubmit = document.querySelector('.order__submit');
 let orderTotalAmount = 0;
 let orderItemsCount = 0;
+
+// create text (basket is empty) if order basket is empty
+const emptyOrderBasket = document.createElement('li');
+  emptyOrderBasket.classList.add('order__item');
+  emptyOrderBasket.innerHTML =  `<span>Корзина пустая</span>`;
+  emptyOrderBasket.style.display = 'flex';
+  emptyOrderBasket.style.justifyContent = 'center';
+  orderList.appendChild(emptyOrderBasket);
 
 // calculates the total amount of the order
 function updateTotalAmountDisplay() {
@@ -22,7 +38,7 @@ productAddBtn.forEach((button, index) => {
 
 // main function
 function handleProductAddClick(index) {
-  const orderList = document.querySelector('.order__list');
+
   const catalogItem = document.querySelector(`.catalog__item:nth-child(${index + 1})`); // Используем :nth-child() для получения нужного элемента
   const catalogItemInfo = {
     catalogItemName: catalogItem.querySelector(".product__title button").textContent,
@@ -30,7 +46,7 @@ function handleProductAddClick(index) {
     catalogItemPrice: +catalogItem.querySelector(".product__price span").textContent, // Преобразуем в число
     catalogItemImageSrc: catalogItem.querySelector(".product__image").getAttribute("src"),
   };
-
+  
   // creates a new item at the end of the order basket
   const orderItem = createOrderItem(catalogItemInfo);
   orderList.appendChild(orderItem);
@@ -54,6 +70,11 @@ function handleProductAddClick(index) {
 
   countPlusBtn.addEventListener('click', updateOneItemCount.bind(countAmountElement, 1));
   countMinusBtn.addEventListener('click', updateOneItemCount.bind(countAmountElement, -1));
+
+  // add display style
+  orderTotalInfo.style.display = orderItemsCount ? 'flex' : 'none';
+  orderSubmit.style.display = orderItemsCount ? 'block' : 'none';
+  emptyOrderBasket.style.display = orderItemsCount ? 'none' : 'flex';
 };
 
 // counts the quantity of each item in the order basket and deletes if there are 0 items
@@ -71,6 +92,12 @@ function updateOneItemCount(delta) {
     orderTotalAmount -= parseFloat(productPriceElement.textContent);
     updateTotalAmountDisplay();
     orderItem.remove();
+    // if orderItemsCount is 0 remove 2 elements and add text (basket is empty)
+    if (orderItemsCount === 0) {
+      orderTotalInfo.style.display = 'none';
+      orderSubmit.style.display = 'none';
+      emptyOrderBasket.style.display = 'flex';
+    };
   } else { // counts the quantity of each item
     orderItemsCount += delta;
     updateTotalOrderItems();
