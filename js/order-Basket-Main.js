@@ -25,7 +25,7 @@ function handleProductAddClick(index) {
   const orderList = document.querySelector('.order__list');
   const catalogItem = document.querySelector(`.catalog__item:nth-child(${index + 1})`); // Используем :nth-child() для получения нужного элемента
   const catalogItemInfo = {
-    catalogItemName: catalogItem.querySelector(".product__title button").textContent,
+    catalogItemName: catalogItem.querySelector(".product__detail-name").textContent,
     catalogItemWeight: catalogItem.querySelector(".product__weight").textContent,
     catalogItemPrice: +catalogItem.querySelector(".product__price span").textContent, // Преобразуем в число
     catalogItemImageSrc: catalogItem.querySelector(".product__image").getAttribute("src"),
