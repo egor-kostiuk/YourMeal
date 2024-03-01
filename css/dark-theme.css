@@ -1,77 +1,25 @@
-.dark-theme {
-  --color: black;
-  --size: 20px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: var(--size);
-  user-select: none;
-  fill: var(--color);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
-  border-radius: 12px;
-  margin-bottom: 10px;
-  padding: 12px;
+body {
+  background-color: #373333;
 }
 
-.dark-theme-button {
-  display: flex;
-  align-items: center;
-  width: 20px;
-  height: 20px;
+/* Catalog title */
+.catalog__title {
+  color: white;
 }
 
-.dark-theme .moon {
-  position: absolute;
-  animation: keyframes-fill .5s;
+/* Catalog item card */
+.product {
+  background-color: #555353;
+  color: white;
 }
 
-.dark-theme .sun {
-  position: absolute;
-  display: none;
-  animation: keyframes-fill .5s;
+/* Order basket */
+.order__wrapper {
+  background-color: #555353;
+  color: white;
 }
 
-.dark-theme input:checked ~ .moon {
-  display: none;
-}
-
-.dark-theme input:checked ~ .sun {
-  display: block;
-}
-
-/* Hide the default checkbox  */
-.dark-theme input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Animation */
-@keyframes keyframes-fill {
-  0% {
-    transform: rotate(-360deg) scale(0);
-    opacity: 0;
-  }
-
-  75% {
-    transform: rotate(25deg);
-  }
-}
-
-@media (min-width: 1024px) {
-  .dark-theme { 
-    --size: 30px;
-    width: 84px;
-    height: 84px;
-    padding: 24px;
-  }
-
-  .dark-theme-button {
-    width: 30px;
-    height: 30px;
-  }
+/* Footer */
+.footer {
+  background-color: #555353;
 }
