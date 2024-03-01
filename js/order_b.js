@@ -5,16 +5,16 @@ const orderTitle = document.querySelector('.order__wrap-title');
 const closeBtn = document.querySelector('.order__close');
 
 // Получаем ссылку на корзину
-const order = document.querySelector('.order');
+const orderBasket = document.querySelector('.order__wrapper');
 
 // Функция для открытия корзины
 function openOrder() {
-  order.classList.add('order_open');
+  orderBasket.classList.add('order_open');
 }
 
 // Функция для закрытия корзины
 function closeOrder() {
-  order.classList.remove('order_open');
+  orderBasket.classList.remove('order_open');
 }
 
 // Добавляем обработчик события на клик по div "order__wrap-title"
