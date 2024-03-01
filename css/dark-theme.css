@@ -1,8 +1,8 @@
 .dark-theme {
   --color: black;
-  --size: 30px;
-  width: 84px;
-  height: 84px;
+  --size: 20px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -12,14 +12,14 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
   border-radius: 12px;
   margin-bottom: 10px;
-  padding: 24px;
+  padding: 12px;
 }
 
 .dark-theme-button {
   display: flex;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 .dark-theme .moon {
@@ -62,3 +62,16 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .dark-theme { 
+    --size: 30px;
+    width: 84px;
+    height: 84px;
+    padding: 24px;
+  }
+
+  .dark-theme-button {
+    width: 30px;
+    height: 30px;
+  }
+}
