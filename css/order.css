@@ -3,8 +3,10 @@
 }
 
 .order__wrapper {
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
     border-radius: 12px;
@@ -151,7 +153,7 @@
         transition: width 0.06s ease-in-out;
     }
 
-    .order__wrapper.order_open {
+    .order.order_open {
         width: 300px;
     }
 }
