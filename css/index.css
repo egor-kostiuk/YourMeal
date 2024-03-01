@@ -27,3 +27,6 @@
 
 /* Modal order window */
 @import 'modal-delivery.css';
+
+/* Dark theme */
+@import 'dark-theme-button.css';
