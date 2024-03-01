@@ -1,0 +1,64 @@
+.dark-theme {
+  --color: black;
+  --size: 30px;
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 24px;
+}
+
+.dark-theme-button {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.dark-theme .moon {
+  position: absolute;
+  animation: keyframes-fill .5s;
+}
+
+.dark-theme .sun {
+  position: absolute;
+  display: none;
+  animation: keyframes-fill .5s;
+}
+
+.dark-theme input:checked ~ .moon {
+  display: none;
+}
+
+.dark-theme input:checked ~ .sun {
+  display: block;
+}
+
+/* Hide the default checkbox  */
+.dark-theme input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Animation */
+@keyframes keyframes-fill {
+  0% {
+    transform: rotate(-360deg) scale(0);
+    opacity: 0;
+  }
+
+  75% {
+    transform: rotate(25deg);
+  }
+}
+
