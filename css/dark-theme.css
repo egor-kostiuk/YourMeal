@@ -19,7 +19,29 @@ body {
   color: white;
 }
 
+.order__count {
+  color: black;
+}
+
+.count__amount {
+  color: black;
+}
+
 /* Footer */
 .footer {
   background-color: #555353;
 }
+
+.footer__development {
+  color: white;
+}
+
+.footer__contact {
+  color: white;
+}
+
+.dark-theme {
+  background-color: #555353;
+  --color: white;
+}
+
