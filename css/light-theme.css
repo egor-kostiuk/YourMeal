@@ -1,0 +1,37 @@
+body {
+  background-color: #F9F9F9;
+}
+
+/* Catalog title */
+.catalog__title {
+  color: black;
+}
+
+/* Catalog item card */
+.product {
+  background-color: white;
+  color: black;
+}
+
+/* Order basket */
+.order__wrapper {
+  background-color: white;
+  color: black;
+}
+
+/* Footer */
+.footer {
+  background-color: white;
+}
+
+.footer__development {
+  color: black;
+}
+
+.footer__contact {
+  color: black;
+}
+
+.dark-theme {
+  background-color: white;
+}
