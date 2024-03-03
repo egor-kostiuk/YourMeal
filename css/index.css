@@ -30,3 +30,6 @@
 
 /* Dark theme */
 @import 'dark-theme-button.css';
+
+/* Language */
+@import 'language.css';

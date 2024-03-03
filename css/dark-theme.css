@@ -45,6 +45,10 @@ body {
   --color: white;
 }
 
+.language__info {
+  color: white;
+}
+
 /* Modal catalog item info */
 .modal-product {
   background-color: #373333;
