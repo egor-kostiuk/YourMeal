@@ -147,7 +147,7 @@
 
 @media (min-width: 768px) {
     .order {
-        width: 145px;
+        width: 200px;
         transition: width 0.06s ease-in-out;
     }
 

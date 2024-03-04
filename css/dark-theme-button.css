@@ -3,7 +3,9 @@
   --size: 20px;
   width: 48px;
   height: 48px;
-  display: flex;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
   align-items: center;
   cursor: pointer;
   font-size: var(--size);
@@ -41,6 +43,22 @@
 .dark-theme input:checked ~ .sun {
   display: block;
 }
+
+.dark-theme:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.14) 50%, transparent 100%);
+  transition: left 0.3s ease;
+}
+
+.dark-theme:hover:before {
+  left: 100%;
+}
+
 
 /* Hide the default checkbox  */
 .dark-theme input {

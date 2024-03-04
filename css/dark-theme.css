@@ -40,9 +40,20 @@ body {
   color: white;
 }
 
+/* Dark theme button */
 .dark-theme {
   background-color: #555353;
   --color: white;
+}
+
+/* Language button */
+.language__wrapper, 
+.language__wrapper-small {
+  background-color: #555353;
+}
+
+.language__info {
+  color: white;
 }
 
 /* Modal catalog item info */
