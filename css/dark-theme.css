@@ -47,7 +47,8 @@ body {
 }
 
 /* Language button */
-.language__wrapper, .language__wrapper-small {
+.language__wrapper, 
+.language__wrapper-small {
   background-color: #555353;
 }
 
