@@ -7,6 +7,10 @@ body {
   color: white;
 }
 
+.catalog__block {
+  background-color: #555353;
+}
+
 /* Catalog item card */
 .product {
   background-color: #555353;
@@ -42,14 +46,14 @@ body {
 
 /* Dark theme button */
 .dark-theme {
-  background-color: #555353;
+  background-color: #a3a3a3;
   --color: white;
 }
 
 /* Language button */
 .language__wrapper, 
 .language__wrapper-small {
-  background-color: #555353;
+  background-color: #a3a3a3;
 }
 
 .language__info {

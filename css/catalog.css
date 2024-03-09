@@ -21,8 +21,16 @@
 }
 
 .catalog__block {
+    width: 200px;
+    height: 68px;
     display: flex;
+    align-items: center;
     gap: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 
@@ -51,5 +59,10 @@
     .catalog__list {
         grid-template-columns: repeat(auto-fit, 300px);
         gap: 30px;
+    }
+
+    .catalog__block {
+        width: 300px;
+        height: 84px;
     }
 }
