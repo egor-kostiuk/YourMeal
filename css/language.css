@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
 }
 
 .language__wrapper, 
@@ -17,7 +18,6 @@
   user-select: none;
   fill: var(--color);
   background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
   padding: 12px;
   border-radius: 50%;
 }
@@ -61,10 +61,10 @@
 
 @media (min-width: 1024px) {
   .language__wrapper { 
-    --size: 30px;
-    width: 84px;
-    height: 84px;
-    padding: 24px;
+    --size: 25px;
+    width: 64px;
+    height: 64px;
+    padding: 16px;
   }
 
   .language__wrapper-small {
@@ -74,7 +74,7 @@
   }
 
   .language__info {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .language__info-small {
