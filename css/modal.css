@@ -9,6 +9,7 @@
 
 .modal_open {
     display: flex;
+    z-index: 1;
 }
 
 .modal__main {
