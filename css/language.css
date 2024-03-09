@@ -20,6 +20,7 @@
   background-color: white;
   padding: 12px;
   border-radius: 50%;
+  border: 1px solid rgb(194, 194, 194);
 }
 
 .language__wrapper-main {

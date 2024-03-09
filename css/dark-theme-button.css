@@ -12,8 +12,9 @@
   user-select: none;
   fill: var(--color);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
-  border-radius: 12px;
+  border-radius: 50%;
   padding: 12px;
+  border: 1px solid rgb(194, 194, 194);
 }
 
 .dark-theme-button {
