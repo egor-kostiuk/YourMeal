@@ -1,4 +1,5 @@
 import { createOrderItem } from './create-order-basket-item.js';
+import { emptyOrderBasket } from './utils.js'
 
 // main order list const
 const orderList = document.querySelector('.order__list');
@@ -13,22 +14,15 @@ let orderTotalAmount = 0;
 let orderItemsCount = 0;
 
 // create text (basket is empty) if order basket is empty
-const emptyOrderBasket = document.createElement('li');
-  emptyOrderBasket.classList.add('order__item');
-  emptyOrderBasket.innerHTML =  `<span>Корзина пустая</span>`;
-  emptyOrderBasket.style.display = 'flex';
-  emptyOrderBasket.style.justifyContent = 'center';
   orderList.appendChild(emptyOrderBasket);
 
 // calculates the total amount of the order
 function updateTotalAmountDisplay() {
-  const orderTotalAmountElement = document.querySelector('.order__total-amount');
-  orderTotalAmountElement.textContent = orderTotalAmount;
+  document.querySelector('.order__total-amount').textContent = orderTotalAmount;
 };
 // calculates the total Items in the order basket
 function updateTotalOrderItems() {
-  const orderTotalCountElement = document.querySelector('.order__count');
-  orderTotalCountElement.textContent = orderItemsCount;
+  document.querySelector('.order__count').textContent = orderItemsCount;
 };
 
 // When you click on the button on the catalog item card, all the functionality of the order basket works
@@ -38,7 +32,6 @@ productAddBtn.forEach((button, index) => {
 
 // main function
 function handleProductAddClick(index) {
-
   const catalogItem = document.querySelector(`.catalog__item:nth-child(${index + 1})`); // Используем :nth-child() для получения нужного элемента
   const catalogItemInfo = {
     catalogItemName: catalogItem.querySelector(".product__detail-name").textContent,
@@ -63,13 +56,10 @@ function handleProductAddClick(index) {
   orderTotalAmount += catalogItemInfo.catalogItemPrice;
   updateTotalAmountDisplay();
 
-  // consts for updateOneItemCount()
-  const countPlusBtn = orderItem.querySelector('.count__plus');
-  const countMinusBtn = orderItem.querySelector('.count__minus');
+  // pdateOneItemCount()
   const countAmountElement = orderItem.querySelector('.count__amount');
-
-  countPlusBtn.addEventListener('click', updateOneItemCount.bind(countAmountElement, 1));
-  countMinusBtn.addEventListener('click', updateOneItemCount.bind(countAmountElement, -1));
+  orderItem.querySelector('.count__plus').addEventListener('click', updateOneItemCount.bind(countAmountElement, 1));
+  orderItem.querySelector('.count__minus').addEventListener('click', updateOneItemCount.bind(countAmountElement, -1));
 
   // add display style
   orderTotalInfo.style.display = orderItemsCount ? 'flex' : 'none';
@@ -79,30 +69,27 @@ function handleProductAddClick(index) {
 
 // counts the quantity of each item in the order basket and deletes if there are 0 items
 function updateOneItemCount(delta) {
-  let countAmountElement = this.closest('.count__amount');
+  const orderItem = this.closest('.order__item');
+  const countAmountElement = orderItem.querySelector('.count__amount');
+  const productPriceElement = orderItem.querySelector('.order__product-price span');
+  
   let currentAmount = parseInt(countAmountElement.textContent);
   currentAmount = Math.max(currentAmount + delta, 0);
-  let orderItem = this.closest('.order__item');
-  let productPriceElement = orderItem.querySelector('.order__product-price span');
+
+  const priceChange = delta * parseFloat(productPriceElement.textContent);
+  orderItemsCount += delta;
+  updateTotalOrderItems();
+  orderTotalAmount += priceChange;
+  updateTotalAmountDisplay();
 
   if (currentAmount === 0 && delta === -1) {
-    // If the quantity is 0 and the "count__minus" button is pressed, remove the item from the order basket
-    orderItemsCount--;
-    updateTotalOrderItems();
-    orderTotalAmount -= parseFloat(productPriceElement.textContent);
-    updateTotalAmountDisplay();
     orderItem.remove();
-    // if orderItemsCount is 0 remove 2 elements and add text (basket is empty)
     if (orderItemsCount === 0) {
       orderTotalInfo.style.display = 'none';
       orderSubmit.style.display = 'none';
       emptyOrderBasket.style.display = 'flex';
     };
-  } else { // counts the quantity of each item
-    orderItemsCount += delta;
-    updateTotalOrderItems();
-    orderTotalAmount += delta * parseFloat(productPriceElement.textContent);
-    updateTotalAmountDisplay();
+  } else {
     countAmountElement.textContent = currentAmount;
   };
 };
