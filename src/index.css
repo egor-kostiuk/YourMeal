@@ -4,6 +4,7 @@
 
 body {
   @apply text-base;
+  background-color: #F9F9F9;
 }
 
 :root {
