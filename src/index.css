@@ -1,12 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  @apply text-base;
-  background-color: #F9F9F9;
+* {
+  padding: 0px;
+	margin: 0px;
+	border: none;
 }
 
-:root {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/src/assets/fonts/nunito-v25-cyrillic_latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/src/assets/fonts/nunito-v25-cyrillic_latin-800.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #F9F9F9;
   font-family: Nunito, sans-serif;
+}
+
+.container {
+  max-width: calc(var(--container) + (var(--padding-container) * 2));
+  padding: 0 var(--padding-container);
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  html {
+      --container: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+      --padding-container: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+      --container: 960px;
+      --padding-container: 32px;
+  }
+}
+
+@media (min-width: 1360px) {
+  html {
+      --container: 1290px;
+  }
 }
