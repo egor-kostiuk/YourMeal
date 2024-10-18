@@ -1,0 +1,132 @@
+$header-background-color: #FFAB08;
+$header-text-color: #ffffff;
+$header-red-text-color: #FF5C00;
+
+@mixin respond-to($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
+.header {
+  background-image: url("data:image/svg+xml, %3Csvg id='header' width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='100' fill='%23FFAB08'/%3E%3C/svg%3E");
+  background-size: 611px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 24px 0 30px;
+  margin-bottom: 30px;
+
+  @include respond-to(480px) {
+    background-size: 1400px;
+    padding-bottom: 44px;
+  }
+
+  @include respond-to(768px) {
+    background-size: 2540px;
+  }
+
+  @include respond-to(1024px) {
+    background-size: 2880px;
+    padding-bottom: 63px;
+    margin-bottom: 40px;
+  }
+
+  @include respond-to(1920px) {
+    background-size: 4660px;
+  }
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond-to(480px) {
+    max-width: 480px;
+  }
+
+  @include respond-to(768px) {
+    max-width: calc(562px + (var(--padding-container) * 2));
+  }
+
+  @include respond-to(1024px) {
+    max-width: calc(764px + (var(--padding-container) * 2));
+  }
+
+  @include respond-to(1360px) {
+    max-width: calc(784px + (var(--padding-container) * 2));
+  }
+}
+
+.header__logo {
+  width: 150px;
+  color: $header-text-color;
+  margin: 0 auto 24px;
+}
+
+.header__title-container {
+  padding-bottom: 246px;
+  background: url('../../assets/img/header-burger.svg') bottom/227px no-repeat;
+  text-align: center;
+  color: $header-text-color;
+
+  @include respond-to(480px) {
+    padding-bottom: 0;
+    padding-left: 180px;
+    padding-top: 27px;
+    text-align: left;
+    background-position: left;
+    background-size: contain;
+    min-height: 190px;
+  }
+
+  @include respond-to(768px) {
+    padding-left: 237px;
+    min-height: 229px;
+  }
+
+  @include respond-to(1024px) {
+    padding-left: 326px;
+    min-height: 326px;
+    padding-top: 46px;
+  }
+
+  @include respond-to(1360px) {
+    padding-left: 346px;
+  }
+}
+
+.header__title {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 120%;
+  margin-bottom: 16px;
+
+  @include respond-to(768px) {
+    font-size: 36px;
+    margin-bottom: 26px;
+  }
+
+  @include respond-to(1024px) {
+    font-size: 50px;
+    margin-bottom: 52px;
+  }
+}
+
+.header__title-text {
+  display: block;
+
+  &.header__title-text_red {
+    color: $header-red-text-color;
+  }
+}
+
+.header__appeal {
+  font-size: 12px;
+  line-height: 16px;
+
+  @include respond-to(1024px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
