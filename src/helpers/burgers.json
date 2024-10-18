@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "Мясная бомба",
-      "image": "/src/assets/img/burger-1.jpg",
+      "image": "/src/assets/img/burgers/burger-1.jpg",
       "price": 689,
       "weight": "520г",
       "description": "Бургер для справжніх любителів м'яса — подвійний шар соковитої яловичини, бекон, сир і соус барбекю для вибухового смаку.",
@@ -20,7 +20,7 @@
     {
       "id": 1,
       "name": "Супер сирний",
-      "image": "/src/assets/img/burger-2.jpg",
+      "image": "/src/assets/img/burgers/burger-2.jpg",
       "price": 550,
       "weight": "512г",
       "description": "Цей бургер переповнений сиром! Поєднання трьох видів сиру з соковитою яловичиною і сирним соусом для справжніх гурманів.",
@@ -38,7 +38,7 @@
     {
       "id": 2,
       "name": "Ситний",
-      "image": "/src/assets/img/burger-3.jpg",
+      "image": "/src/assets/img/burgers/burger-3.jpg",
       "price": 639,
       "weight": "580г",
       "description": "Ідеальний бургер для тих, хто хоче добре наїстися. Соковита котлета з яловичини, шинка і яйце додають неперевершену ситність.",
@@ -56,7 +56,7 @@
     {
       "id": 3,
       "name": "Важкий удар",
-      "image": "/src/assets/img/burger-4.jpg",
+      "image": "/src/assets/img/burgers/burger-4.jpg",
       "price": 480,
       "weight": "470г",
       "description": "Бургер для справжніх любителів м'яса — подвійний шар соковитої яловичини, бекон, сир і соус барбекю для вибухового смаку.",
@@ -73,7 +73,7 @@
     {
       "id": 4,
       "name": "Вічна класика",
-      "image": "/src/assets/img/burger-5.jpg",
+      "image": "/src/assets/img/burgers/burger-5.jpg",
       "price": 450,
       "weight": "450г",
       "description": "Традиційний бургер, який ніколи не виходить з моди. Яловичина, чедер і свіжі овочі в класичному поєднанні смаків.",
@@ -91,7 +91,7 @@
     {
       "id": 5,
       "name": "Італійський",
-      "image": "/src/assets/img/burger-6.jpg",
+      "image": "/src/assets/img/burgers/burger-6.jpg",
       "price": 560,
       "weight": "510г",
       "description": "Натхнений італійською кухнею бургер з ніжною моцарелою, свіжими помідорами, руколою та ароматним соусом песто.",
