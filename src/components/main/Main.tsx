@@ -1,11 +1,19 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import { Nav } from '../nav/Nav'
 
-export const Main: FC = () => {
+import './Main.scss'
+
+interface IMain {
+  children: ReactNode
+}
+
+export const Main: FC<IMain> = ({ children }) => {
   return (
     <main>
       <Nav />
-      {/* TODO: section */}
+      <section className='catalog'>
+        <div className='container catalog__container'>{children}</div>
+      </section>
     </main>
   )
 }
